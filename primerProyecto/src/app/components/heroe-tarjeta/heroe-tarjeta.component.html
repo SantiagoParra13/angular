@@ -1,0 +1,35 @@
+
+  
+  
+      <div class="card m-5 animated fadeIn fast"   style="width: 18rem">
+        <img 
+          src="{{heroe.img}}"
+          class="card-img-top img-fluid"
+          alt="{{heroe.nombre}}"
+          style="width: 100%; "
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{heroe.nombre}}</h5>
+          <p class="card-text">
+            {{heroe.bio}}
+          <p class="card-text">
+            {{heroe.aparicion}}
+          </p>
+          <p class="card-text">
+            <small class="text-muted">{{heroe.casa}}</small>
+          </p>
+
+          <button (click)="verMas()"
+          type="button" class=" btn btn-outline-primary btn-block ">Ver Mas...</button>
+
+         
+        </div>
+      </div>
+      
+
+
+
+
+       
+  
+

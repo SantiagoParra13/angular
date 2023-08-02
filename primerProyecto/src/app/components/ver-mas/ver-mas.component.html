@@ -1,0 +1,18 @@
+<h1>{{heroe.nombre | uppercase}} <small>{{heroe.aparicion}}</small></h1>
+<hr>
+
+<div class="row animated fadeIn fast">
+    <div class="col-md-4 d-flex flex-column justify-content-center">
+        <img src="{{heroe.img}}" class="img-fluid" alt="{{heroe.nombre}}" width="300px">
+        <br><br>
+        <button (click)="volver()" type="button" class="btn btn-outline-danger btn-block">Regresar</button>
+    </div>
+    <div class="col-md-8">
+        <h3>{{heroe.nombre}}</h3>
+        <hr>
+        <p>{{heroe.bio}}</p>
+        <img [src]="img" alt="{{heroe.nombre}}" width="20%" height="30%" class="text-right">
+    </div>
+</div>
+
+
