@@ -35,8 +35,6 @@ ngOnInit() {
   })
 }
 
-verMas(idx:number){
-  this.router.navigate(['/ver-mas'])
- }
+
  }
 

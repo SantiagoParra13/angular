@@ -23,6 +23,6 @@ export class HeroesComponent implements OnInit {
     }
 
     verMas(idx:number){
-     this.router.navigate(['/ver-mas'])
+     this.router.navigate(['/ver-mas',idx])
     }
 }
