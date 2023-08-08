@@ -1,0 +1,26 @@
+<div [ngClass]="alerta" class="alert alert-success">
+  <strong>aa! </strong>aaaaaa
+</div>
+
+<button class="btn btn-primary" (click)="alerta = 'alert-info'">Info</button>
+<button class="btn btn-success" (click)="alerta = 'alert-success'">
+  Successs
+</button>
+
+<h3 class="mt-3" [ngClass]="{ 'text-danger': propiedades }">Hello Word</h3>
+
+<button
+  class="btn"
+  (click)="propiedades = !propiedades"
+  [ngClass]="{ 'btn-danger': propiedades, 'btn-info': !propiedades }"
+>
+  Cambiar
+</button>
+
+<h3 class="mt-3">Proceso Asincrono</h3>
+
+<button (click)="ejecutar()" class="btn btn-primary">
+  <i 
+  class="bi bi-refresh bi-spin"></i>
+   Guardar Cambios
+</button>

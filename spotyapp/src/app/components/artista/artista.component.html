@@ -1,0 +1,49 @@
+<app-loading *ngIf="loading"></app-loading>
+
+<div class="row animated fadeIn  m-5" *ngIf="!loading">
+  <div class="col-2">
+    <img [src]="artista.images | noimage" class="img-thumbnail img-circle" />
+  </div>
+  <div class="col">
+    <h3>{{ artista.name }}</h3>
+    <p>
+      <a [href]="artista.external_urls.spotify" target=" blank">
+        ir a la pagina del artista
+      </a>
+    </p>
+  </div>
+  <div class="col-4 text-right">
+    <button routerLink="/search" class="btn btn-outline-danger">
+      Regresar
+    </button>
+  </div>
+</div>
+
+
+
+
+<div class="container m-5">
+  <div class="row ">
+    <div class="col fs-3 fw-bold border-bottom border-white pb-2 ">Foto</div>
+    <div class="col fs-3 fw-bold border-bottom border-white pb-2">Álbum</div>
+    <div class="col fs-3 fw-bold border-bottom border-white pb-2">Canción</div>
+    <div class="col fs-3 fw-bold border-bottom border-white pb-2">Vista Previa</div>
+  </div>
+
+  <div class="row m-2" *ngFor="let tracks of topTracks">
+    <div class="col-2">
+      <img [src]="tracks.album.images | noimage" class="img-thumbnail" width="80px" height="80px">
+    </div>
+    <div class="col-3 text">{{ tracks.album.name }}</div>
+    <div class="col-3">{{ tracks.name }}</div>
+    <div class="col-4">
+      <iframe style="border-radius: 12px;" [src]="tracks.uri | domseguro" width="300" height="80"></iframe>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

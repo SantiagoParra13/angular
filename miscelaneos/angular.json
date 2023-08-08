@@ -1,13 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "cli": {
-    "packageManager": "npm",
-    "analytics": "9d0a5bc5-be59-4d0e-834d-4d8fce3b582b"
-  },
   "newProjectRoot": "projects",
   "projects": {
-    "primerProyecto": {
+    "miscelaneos": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/primer-proyecto",
+            "outputPath": "dist/miscelaneos",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -29,12 +25,12 @@
               "src/assets"
             ],
             "styles": [
-             
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
 
             ]
           },
@@ -69,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "primerProyecto:build:production"
+              "browserTarget": "miscelaneos:build:production"
             },
             "development": {
-              "browserTarget": "primerProyecto:build:development"
+              "browserTarget": "miscelaneos:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "primerProyecto:build"
+            "browserTarget": "miscelaneos:build"
           }
         },
         "test": {
@@ -103,5 +99,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "1162eb08-a9e1-407d-b3b6-c2589d6e19b1"
   }
 }

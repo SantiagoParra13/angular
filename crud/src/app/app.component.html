@@ -1,0 +1,35 @@
+<nav class="navbar  bg-dark">
+  <a class="navbar-brand m-3 text-white" href="/">
+      <h3>CRUD con Angular</h3>
+  </a>
+</nav>
+
+<div class="container">
+<div class="row">
+  <div class="col-8 m-5">
+    <ul class="list-group" >
+      <li *ngFor ="let employee of employeeArray" class="list-group-item list-group-item-action"
+      (click)="openEdit(employee)"
+      [class.active]="employee == selectEmployee">
+        <span class="badge bg-primary m-2">
+          {{employee.id}}
+        </span>{{employee.name}}  {{employee.country}}</li>
+    </ul>
+    <div class="card m-4">
+      <div class="card-body">
+        <div class="card-title">
+          Inserta un nuevo empleado
+        </div> 
+        <div class="form-group m-3">
+          <input type="text" [(ngModel)]="selectEmployee.name" placeholder="Inserte Un Nombre" class="form-control">
+        </div>
+        <div class="form-group m-3">
+          <input type="text" [(ngModel)]="selectEmployee.country" placeholder="Inserte Un Pais" class="form-control">
+        </div>
+          <button (click)="addOrEdit()"  class="btn btn-primary m-3 " >Submit</button>
+          <button *ngIf="selectEmployee.id !==0" (click)="delete()" class="btn btn-danger m-3 " >Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

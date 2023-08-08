@@ -1,13 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "cli": {
-    "packageManager": "npm",
-    "analytics": "9d0a5bc5-be59-4d0e-834d-4d8fce3b582b"
-  },
   "newProjectRoot": "projects",
   "projects": {
-    "primerProyecto": {
+    "spotyapp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/primer-proyecto",
+            "outputPath": "dist/spotyapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -29,12 +25,14 @@
               "src/assets"
             ],
             "styles": [
-             
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
+
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
+
+             
 
             ]
           },
@@ -69,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "primerProyecto:build:production"
+              "browserTarget": "spotyapp:build:production"
             },
             "development": {
-              "browserTarget": "primerProyecto:build:development"
+              "browserTarget": "spotyapp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "primerProyecto:build"
+            "browserTarget": "spotyapp:build"
           }
         },
         "test": {
@@ -103,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "37f044c9-2b7d-4081-80d6-df4c4c468e21"
   }
 }
