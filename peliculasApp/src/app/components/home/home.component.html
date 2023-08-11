@@ -1,0 +1,74 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-3">PeliculasAPP</h1>
+      <p class="lead">Esta es una aplicación de películas</p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <br>
+  
+    <h1>Cartelera</h1>
+    <hr>
+  
+    <div class="row" *ngIf="populares">
+  
+      <div class="col-sm-6">
+  
+        <div class="row">
+          <div class="col-md-12 puntero">
+            <a [routerLink]="['/pelicul', populares[0].id, 'buscar']">
+              <img class="div-pic-1" src="https://image.tmdb.org/t/p/w500{{populares[0].backdrop_path}}" alt="Imagen de película"> 
+            </a>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-sm-6 ">
+            <a [routerLink]="['/pelicul', populares[1].id, 'buscar']">
+          <img class="div-pic-2" src="https://image.tmdb.org/t/p/w500{{populares[1].backdrop_path}}" alt="Imagen de película"> 
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <a [routerLink]="['/pelicul', populares[2].id, 'buscar']">
+          <img class="div-pic-2" src="https://image.tmdb.org/t/p/w500{{populares[2].backdrop_path}}" alt="Imagen de película"> 
+            </a>
+
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="col-sm-6">
+  
+  
+        <div class="row">
+          <div class="col-sm-6 ">
+            <a [routerLink]="['/pelicul', populares[3].id, 'home']">
+          <img class="div-pic-2" src="https://image.tmdb.org/t/p/w500{{populares[3].backdrop_path}}" alt="Imagen de película"> 
+              </a>
+          </div>
+          <div class="col-sm-6">
+            <a [routerLink]="['/pelicul', populares[4].id, 'buscar']">
+          <img class="div-pic-2" src="https://image.tmdb.org/t/p/w500{{populares[4].backdrop_path}}" alt="Imagen de película"> 
+            </a>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-12">
+            <a [routerLink]="['/pelicul', populares[5].id, 'buscar']">
+          <img class="div-pic-1" src="https://image.tmdb.org/t/p/w500{{populares[5].backdrop_path}}" alt="Imagen de película"> 
+            </a>
+
+        </div>
+      </div>
+  
+      </div>
+  
+    </div>
+  
+  
+  </div>
+
+  <app-galeria></app-galeria>

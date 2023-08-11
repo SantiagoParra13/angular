@@ -1,0 +1,66 @@
+<div class="container">
+    <br>
+  
+    <h1>Actores</h1>
+    <hr>
+  
+    <div class="row m-5" *ngIf="vistos">
+  
+      <div class="col-sm-6">
+  
+        <div class="row">
+          <div class="col-md-12 puntero">
+            <a [routerLink]="['/pelicul', vistos[0].id, 'buscar']">
+              <img class="div-pic-1" src="https://image.tmdb.org/t/p/w500{{vistos[0].profile_path}}" alt="Imagen de película"> 
+            </a>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-sm-6 " >
+            <a [routerLink]="['/pelicul', vistos[1].id, 'buscar']">
+          <img class="div-pic-2" src="https://image.tmdb.org/t/p/w500{{vistos[1].profile_path}}" alt="Imagen de película">
+            </a> 
+          </div>
+          <div class="col-sm-6" >
+            <a [routerLink]="['/pelicul', vistos[2].id, 'buscar']">
+          <img class="div-pic-2" src="https://image.tmdb.org/t/p/w500{{vistos[2].profile_path}}" alt="Imagen de película"> 
+            </a>
+
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="col-sm-6">
+  
+  
+        <div class="row">
+          <div class="col-sm-6 " >
+          <a [routerLink]="['/pelicul', vistos[3].id, 'buscar']">
+          <img class="div-pic-2" src="https://image.tmdb.org/t/p/w500{{vistos[3].profile_path}}" alt="Imagen de película"> 
+          </a>
+
+          </div>
+          <div class="col-sm-6">
+            <a [routerLink]="['/pelicul', vistos[4].id, 'buscar']">
+          <img class="div-pic-2" src="https://image.tmdb.org/t/p/w500{{vistos[4].profile_path}}" alt="Imagen de película"> 
+            </a>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-12">
+            <a [routerLink]="['/pelicul', vistos[5].id, 'buscar']">
+          <img class="div-pic-1" src="https://image.tmdb.org/t/p/w500{{vistos[5].profile_path}}" alt="Imagen de película"> 
+            </a>
+
+        </div>
+      </div>
+  
+      </div>
+  
+    </div>
+  
+  
+  </div>

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "authapp": {
+    "fireChat": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/authapp",
+            "outputPath": "dist/fire-chat",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -24,13 +24,10 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+            "styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {
@@ -63,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "authapp:build:production"
+              "browserTarget": "fireChat:build:production"
             },
             "development": {
-              "browserTarget": "authapp:build:development"
+              "browserTarget": "fireChat:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "authapp:build"
+            "browserTarget": "fireChat:build"
           }
         },
         "test": {
@@ -97,5 +94,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d7e61c72-7860-439b-802f-1ccac7928d0b"
   }
 }

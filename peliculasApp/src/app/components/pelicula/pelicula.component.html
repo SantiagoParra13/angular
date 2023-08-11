@@ -1,0 +1,22 @@
+<div class="container mt-5" *ngIf="pelicula">
+    <div class="card mb-3  w-75 border-success">
+      <div class="row g-0">
+        <div class="col-md-6 align-items-center">
+
+          <img [src]="pelicula | peliculaImagen:true" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <h5 class="card-title fw-bolder">{{ pelicula.title }}</h5>
+           <strong class="mt-5">Sipnosis</strong>
+            <p class="card-text mt-5">{{ pelicula.overview }}</p>
+            <p class="mt-5">Calificacion {{ pelicula.vote_average }}</p>
+            <p class="card-text"><small class="text-body-secondary mt-5">{{ pelicula.release_date }}</small></p>
+          <strong class="text-center"> {{pelicula.tagline}}</strong>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
