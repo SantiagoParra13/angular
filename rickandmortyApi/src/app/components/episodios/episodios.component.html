@@ -1,0 +1,23 @@
+
+<app-loading *ngIf="loading"></app-loading>
+
+
+<div class="container "><p class="fw-bold fs-1 text-white">Episodios</p>
+    <div class="row ">
+      <div class="col-md-3 " *ngFor="let episodios of episodios"    >
+        <div class="card text-bg-dark mb-3 border-success" style="max-width: 18rem;">
+
+            <div class="card-body">
+              <h5 class="card-title text-center">{{episodios.name}} </h5>
+             
+              <p class="card-text">{{episodios.episode}}</p>
+
+              <p class="card-text">creado: {{episodios.created}}</p>
+              <p class="card-text">date: {{episodios.air_date}}</p>
+            </div>
+          </div>
+    </div>
+    </div>
+    
+    </div>
+

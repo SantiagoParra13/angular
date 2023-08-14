@@ -1,0 +1,24 @@
+
+<div class="container ">
+    <div class="card mt-5" style="max-width: 1340px;"  >
+        <div class="row " >
+          <div class="col-md-4 ">
+            <img src="{{detalles.image}}" class="img-fluid rounded-start" alt="{{detalles.image}}" width="100%">
+          </div>
+          <div class="col">
+            <div class="card-body " >
+              <h5 class="card-title ">{{detalles.name}}</h5>
+              <p class="card-text"><strong>Location:</strong> {{detalles.location.name}}</p>
+              <p class="card-text"><strong>gender:</strong> {{detalles.gender}}</p>
+              <p class="card-text"><strong>Origin:</strong> {{detalles.origin.name}}</p>
+              <p class="card-text"><strong>Status:</strong> {{detalles.status}}</p>
+              <p class="card-text"><strong>species:</strong> {{detalles.species}}</p>
+              <p class="card-text"><strong>type:</strong> {{detalles.type}}</p>
+              <p class="card-text"><small class="text-body-secondary">{{detalles.created}}</small></p>
+          <button type="button" class="btn btn-outline-danger mt-4" [routerLink]="['home']">Regresar</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

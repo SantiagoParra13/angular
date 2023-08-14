@@ -15,9 +15,6 @@ export class HomeComponent {
     this._ps.getPopulares().subscribe(data => {
       console.log(data)
     this.populares=data;})
-
-   
-    
   }
 
 }
