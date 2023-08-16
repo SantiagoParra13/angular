@@ -56,5 +56,6 @@ export class ApiRickService {
     return this.http.get(url).pipe(map((res: any) => res));
   }
   
+  
 }
 
