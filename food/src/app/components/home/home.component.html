@@ -2,6 +2,7 @@
     <app-search></app-search>
 </div>
 <app-tags></app-tags>
+<app-no-encontrada [visible]="!foods || foods.length <=0" ressetLinkText="Volver a Buscar"></app-no-encontrada>
 
 <ul>
     <li *ngFor="let food of foods">

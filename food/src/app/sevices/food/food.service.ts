@@ -22,9 +22,8 @@ getFoodById(id:number): foods{
 getAllTag():Tag[]{
   return [
     {name: 'ALL', count: 8},
-    {name: 'comidaRapida', count: 6},
+    {name: 'Comida Rapida', count: 6},
     {name: 'pizza', count: 1},
-    {name: 'lunch', count: 4},
     {name: 'comidaLenta', count: 2},
     {name: 'hamburguesa', count: 1},
     {name: 'pasta', count: 1},
@@ -48,7 +47,7 @@ getAllTag():Tag[]{
         origins: ['italy','france'],
         star: 4.5,
         imageUrl: '/assets/img/food.jpg',
-        tags: ['comidaLenta', 'pasta', 'lunch'],
+        tags: ['comidaLenta', 'pasta'],
       },
       {
         id: 2,
@@ -59,7 +58,7 @@ getAllTag():Tag[]{
         origins: ['france','holanda','piendamo'],
         star: 5.0,
         imageUrl: '/assets/img/food2.jpg',
-        tags: ['comidaRapida', 'pasta', 'lunch'],
+        tags: ['Comida Rapida', 'pasta'],
       },
       {
         id: 3,
@@ -70,7 +69,7 @@ getAllTag():Tag[]{
         origins: ['mexico','singapur','filipinas'],
         star: 5.0,
         imageUrl: '/assets/img/food3.jpg',
-        tags: ['comidaRapida', 'taco', 'lunch'],
+        tags: ['Comida Rapida', 'taco'],
       },
       {
         id: 4,
@@ -81,7 +80,7 @@ getAllTag():Tag[]{
         origins: ['italy','america','popayan'],
         star: 3.0,
         imageUrl: '/assets/img/food4.jpg',
-        tags: ['comidaLenta', 'lasaña', 'lunch'],
+        tags: ['comidaLenta', 'lasaña'],
       },
       {
         id: 5,
@@ -92,7 +91,7 @@ getAllTag():Tag[]{
         origins: ['america','medellin','france'],
         star: 5.0,
         imageUrl: '/assets/img/hamburguesa.jpg',
-        tags: ['comidaRapida', 'hamburguesa', 'lunch'],
+        tags: ['Comida Rapida', 'hamburguesa'],
       },
       {
         id: 6,
@@ -103,7 +102,7 @@ getAllTag():Tag[]{
         origins: ['espain','marroco','indi'],
         star: 4.0,
         imageUrl: '/assets/img/patatas-fritas.jpg',
-        tags: ['comidaRapida', 'papas-fritas', 'lunch'],
+        tags: ['Comida Rapida', 'papas-fritas'],
       },
       {
         id: 7,
@@ -114,7 +113,7 @@ getAllTag():Tag[]{
         origins: ['italy','fance','mexico','colombia'],
         star: 4.0,
         imageUrl: '/assets/img/pizza.jpg',
-        tags: ['comidaRapida', 'pizza', 'lunch'],
+        tags: ['Comida Rapida', 'pizza', ],
       },
 
       {
@@ -126,7 +125,7 @@ getAllTag():Tag[]{
         origins: ['marroco','home'],
         star: 2.0,
         imageUrl: '/assets/img/soup.jpg',
-        tags: ['comidaRapida','comidaLenta', 'soup', 'lunch'],
+        tags: ['Comida Rapida','comidaLenta', 'soup', 'lunch'],
       },
     ];
   }

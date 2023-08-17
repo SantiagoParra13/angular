@@ -1,4 +1,4 @@
-import { foods } from "./food";
+import {  foods} from "./food";
 
 export class CartItem{
     
