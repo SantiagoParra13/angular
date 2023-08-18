@@ -1,0 +1,63 @@
+<p-dialog
+  header="Añadir Producto"
+  [(visible)]="displayAddModule"
+  [modal]="true"
+  [style]="{ width: '50vw' }"
+  [draggable]="false"
+  [resizable]="false"
+  (onHide)="closeModal()"
+>
+<form [formGroup]="productForm">
+  <div class="field">
+    <label class="block" for="tittle">Title</label>
+    <input type="text" pInputText id="title" formControlName="title" />
+    <small class="p-error block" *ngIf="productForm.controls['title'].invalid &&  productForm.controls['title'].dirty ">El Title es requerido</small>
+  </div>
+
+  <div class="field">
+    <label class="block" for="price">Price</label>
+    <p-inputNumber formControlName="price" id="price"></p-inputNumber>
+    <small class="p-error block" *ngIf="productForm.controls['price'].invalid &&  productForm.controls['price'].dirty ">El price es requerido</small>
+  </div>
+
+  <div class="field">
+    <label class="block" for="description">Description</label>
+    <textarea  pInputTextarea id="description" formControlName="Descripcion"></textarea>
+ 
+  </div>
+
+  <div class="field">
+    <label class="block" for="image">Image</label>
+    <textarea  pInputTextarea id="image" formControlName="image"></textarea>
+    <small class="p-error block" *ngIf="productForm.controls['image'].invalid &&  productForm.controls['image'].dirty ">La image es Requerida</small>
+  </div>
+
+  <div class="field">
+    <label class="block" for="category">Category</label>
+    <textarea  pInputTextarea id="category" formControlName="category"></textarea>
+    <small class="p-error block" *ngIf="productForm.controls['category'].invalid &&  productForm.controls['category'].dirty ">La categoria es Requerida</small>
+  </div>
+
+</form>
+
+
+
+
+
+
+
+
+  <ng-template pTemplate="footer">
+    <p-button
+      (click)="closeModal()"
+      label="cancel"
+      styleClass="p-button-text"
+    ></p-button>
+
+    <p-button
+      (click)="AddProduct()"
+      label="Añadir"
+      styleClass="p-button-text"
+    ></p-button>
+  </ng-template>
+</p-dialog>
