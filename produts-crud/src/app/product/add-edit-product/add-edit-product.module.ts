@@ -16,6 +16,7 @@ import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [AddEditProductComponent],
@@ -28,7 +29,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     ReactiveFormsModule,
     InputTextModule,
     InputNumberModule,
-    InputTextareaModule
+    InputTextareaModule,
+    ToastModule
   ],
   exports: [AddEditProductComponent],
 })

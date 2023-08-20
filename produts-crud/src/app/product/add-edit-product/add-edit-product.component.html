@@ -1,5 +1,5 @@
 <p-dialog
-  header="Añadir Producto"
+  header="{{modalType}} Producto"
   [(visible)]="displayAddModule"
   [modal]="true"
   [style]="{ width: '50vw' }"
@@ -7,9 +7,9 @@
   [resizable]="false"
   (onHide)="closeModal()"
 >
-<form [formGroup]="productForm">
+<form [formGroup]="productForm" class="product-form">
   <div class="field">
-    <label class="block" for="tittle">Title</label>
+    <label class="block" for="title">Title</label>
     <input type="text" pInputText id="title" formControlName="title" />
     <small class="p-error block" *ngIf="productForm.controls['title'].invalid &&  productForm.controls['title'].dirty ">El Title es requerido</small>
   </div>
@@ -22,13 +22,13 @@
 
   <div class="field">
     <label class="block" for="description">Description</label>
-    <textarea  pInputTextarea id="description" formControlName="Descripcion"></textarea>
+    <textarea  pInputTextarea id="description" formControlName="description"></textarea>
  
   </div>
 
   <div class="field">
     <label class="block" for="image">Image</label>
-    <textarea  pInputTextarea id="image" formControlName="image"></textarea>
+    <textarea  pInputTextarea id="image" formControlName="image" class="block"></textarea>
     <small class="p-error block" *ngIf="productForm.controls['image'].invalid &&  productForm.controls['image'].dirty ">La image es Requerida</small>
   </div>
 
@@ -56,8 +56,9 @@
 
     <p-button
       (click)="AddProduct()"
-      label="Añadir"
+      label="{{modalType}}"
       styleClass="p-button-text"
+      [disabled]="productForm.invalid"
     ></p-button>
   </ng-template>
 </p-dialog>

@@ -14,4 +14,13 @@ export class ProductserviceService {
   getProducts(): Observable<Product[]>{
     return this.http.get<Product[]>("https://fakestoreapi.com/products?sort=desc")
   }
+
+  sveProduct(posData:any, selectedPdtt:any):Observable<any>{
+    if(!selectedPdtt){
+      return this.http.post("https://fakestoreapi.com/products",posData)
+
+    } else {
+      return this.http.put(`https://fakestoreapi.com/products/${selectedPdtt.id }`,posData)
+    }
+  }
 }

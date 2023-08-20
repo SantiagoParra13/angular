@@ -1,0 +1,11 @@
+/* Estira el formulario para que ocupe todo el ancho */
+.product-form {
+    width: 100%;
+  }
+  
+  /* Estira los campos de entrada y textarea para que ocupen todo el ancho */
+  .field input,
+  .field textarea {
+    width: 100%;
+  }
+  
